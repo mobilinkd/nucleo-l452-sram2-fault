@@ -1,4 +1,4 @@
-stm32l452ceu6 demo
+Hard Fault Demo on STM32L452 Nucleo-64 Board
 ====
 
 Demo program to show problem with STM32L452 running code in SRAM2. This
