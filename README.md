@@ -16,9 +16,9 @@ to a FIR filter running in SRAM2.  The filter results are discarded.
 
 There are 3 GPIOs defined:
 
- * ADC_STATUS
- * FIR_STATUS
- * ERROR
+ * ADC_STATUS (PA0)
+ * FIR_STATUS (PA1)
+ * ERROR (PC0)
  
 ADC_STATUS will flip between high and low as the DMA moves between
 half-complete and complete.
