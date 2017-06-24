@@ -25,7 +25,7 @@ half-complete and complete.
 
 FIR_STATUS will go high during FIR processing and low otherwise.
 
-ERROR is riased in the hard fault handler.
+ERROR is raised in the hard fault handler.
 
 This code will eventually end up in the hard fault handler, at which point
 ERROR is raised and the LED will blink at about 5Hz.
