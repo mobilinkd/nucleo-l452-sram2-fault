@@ -53,6 +53,8 @@
 
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define ERROR_Pin GPIO_PIN_0
+#define ERROR_GPIO_Port GPIOC
 #define ADC_STATUS_Pin GPIO_PIN_0
 #define ADC_STATUS_GPIO_Port GPIOA
 #define FIR_STATUS_Pin GPIO_PIN_1

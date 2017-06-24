@@ -37,7 +37,7 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "main.h"
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -56,7 +56,7 @@ extern TIM_HandleTypeDef htim1;
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-  LD2_GPIO_Port->BSRR = LD2_Pin;
+  ERROR_GPIO_Port->BSRR = ERROR_Pin;
   GPIOA->BRR = GPIO_PIN_15;
   while (1)
   {
