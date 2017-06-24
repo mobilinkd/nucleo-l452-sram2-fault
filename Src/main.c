@@ -701,7 +701,7 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(100);
+    osDelay(500);
     HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
   }
   /* USER CODE END 5 */ 
@@ -768,7 +768,7 @@ void Error_Handler(void)
   /* User can add his own implementation to report the HAL error return state */
   while(1) 
   {
-    blink(100);
+    blink(1000);
   }
   /* USER CODE END Error_Handler */ 
 }

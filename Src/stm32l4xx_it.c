@@ -51,6 +51,36 @@ extern TIM_HandleTypeDef htim1;
 /******************************************************************************/
 
 /**
+* @brief This function handles Hard fault interrupt.
+*/
+void HardFault_Handler(void)
+{
+  /* USER CODE BEGIN HardFault_IRQn 0 */
+  LD2_GPIO_Port->BSRR = LD2_Pin;
+  GPIOA->BRR = GPIO_PIN_15;
+  while (1)
+  {
+    int eh_counter;
+    for (eh_counter = 0; eh_counter != 2000000; ++eh_counter) {
+      asm volatile("nop");
+    }
+    LD2_GPIO_Port->BRR = LD2_Pin;
+    for (eh_counter = 0; eh_counter != 2000000; ++eh_counter) {
+      asm volatile("nop");
+    }
+    LD2_GPIO_Port->BSRR = LD2_Pin;
+  }
+
+  /* USER CODE END HardFault_IRQn 0 */
+  while (1)
+  {
+  }
+  /* USER CODE BEGIN HardFault_IRQn 1 */
+
+  /* USER CODE END HardFault_IRQn 1 */
+}
+
+/**
 * @brief This function handles System tick timer.
 */
 void SysTick_Handler(void)

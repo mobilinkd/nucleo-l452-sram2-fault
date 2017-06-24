@@ -1195,7 +1195,7 @@ extern "C"
   const arm_fir_instance_f32 * S,
   float32_t * pSrc,
   float32_t * pDst,
-  uint32_t blockSize);
+  uint32_t blockSize) __attribute__((section(".bss2")));
 
 
   /**
