@@ -1,8 +1,10 @@
 Hard Fault Demo on STM32L452 Nucleo-64 Board
 ====
 
-Demo program to show problem with STM32L452 running code in SRAM2. This
-demo is designed to run on an [STM32L452RE Nucleo-64](http://www.st.com/en/evaluation-tools/nucleo-l452re.html) board.
+Demo program to show a problem with STM32L452 running code in SRAM2 which
+causes the program to end up (after a random amount of time, typically a
+couple of minutes) in the hard fault handler. This demo is designed to run
+on an [STM32L452RE Nucleo-64](http://www.st.com/en/evaluation-tools/nucleo-l452re.html) board.
 
 There is a [complementary demo for the SMT32L432](https://github.com/mobilinkd/stm32L432kc-nucleo32-demo)
 designed to run on an STM32L432KC Nucleo-32 board which shows that this
